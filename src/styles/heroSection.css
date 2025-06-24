@@ -196,112 +196,112 @@ svg {
   color: #ffcc70;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1200px) {
-  .hamburger {
-    margin-left: auto;
-  }
-
+/* HERO RESPONSIVE STYLES */
+@media (max-width: 1200px) {
   .content {
     left: 150px;
   }
 
   h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
+  }
+
+  .scroll-container {
+    margin-left: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  .content {
+    left: 80px;
+  }
+
+  h1 {
+    font-size: 4rem;
   }
 
   .button-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    padding-right: 0;
   }
 
   .scroll-container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    margin: 30px;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-left: 400px;
   }
 
-  .content {
-    left: 60px;
-    top: 50%;
-  }
-
-  h1 {
-    font-size: 3.5rem;
+  .vertical-text {
+    left: 50px;
+    font-size: 11px;
   }
 
   .subtext {
     font-size: 16px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    position: static;
+    transform: none;
+    padding: 60px 30px 0 30px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .subtext {
+    font-size: 15px;
+    margin-top: 30px;
   }
 
   .buttons {
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .scroll-container {
+    margin: 40px auto;
   }
 
   .vertical-text {
     display: none;
   }
-
-  .scroll-container {
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .circle-text,
-  .text-circle {
-    width: 150px;
-    height: 150px;
-  }
-
-  .center-circle {
-    width: 80px;
-    height: 80px;
-    top: 35px;
-    left: 35px;
-  }
 }
 
-@media screen and (max-width: 480px) {
-  .logo {
-    font-size: 2rem;
-  }
-
+@media (max-width: 480px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .subtext {
     font-size: 14px;
   }
 
-  .arrow,
-  .arrow-dark,
-  .arrow-orange {
-    padding: 10px;
-    font-size: 14px;
-  }
-
   .btn-orange,
   .btn-dark {
-    font-size: 14px;
-    padding: 5px 15px;
+    font-size: 13px;
+    padding: 6px 16px;
   }
 
   .center-circle {
-    width: 60px;
-    height: 60px;
-    top: 45px;
-    left: 45px;
+    width: 80px;
+    height: 80px;
+    top: 60px;
+    left: 60px;
+  }
+
+  .text-circle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .scroll-container {
+    width: 100px;
+    height: 100px;
   }
 }

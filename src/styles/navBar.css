@@ -1,16 +1,22 @@
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 60px;
+  background: transparent;
   color: white;
-  margin: 60px;
   z-index: 10;
 }
+
 .logo {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 550;
-  margin-left: 10px;
 }
+
 .hamburger {
   width: 50px;
   height: 50px;
@@ -22,7 +28,8 @@
   padding-left: 12px;
   gap: 10px;
   border-radius: 5px;
-  margin-left: 1500px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .hamburger span {
@@ -32,12 +39,64 @@
   border-radius: 2px;
 }
 
-.hamburger span:nth-child(1) {
-  width: 36px;
-}
+.hamburger span:nth-child(1),
 .hamburger span:nth-child(2) {
   width: 36px;
 }
 .hamburger span:nth-child(3) {
   width: 24px;
+}
+
+.hamburger:hover {
+  background-color: #1a1a1a;
+}
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  .logo {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .hamburger {
+    width: 45px;
+    height: 45px;
+    gap: 8px;
+    padding-left: 10px;
+  }
+
+  .hamburger span:nth-child(1),
+  .hamburger span:nth-child(2) {
+    width: 30px;
+    height: 3px;
+  }
+
+  .hamburger span:nth-child(3) {
+    width: 20px;
+    height: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+    gap: 6px;
+    padding-left: 8px;
+  }
+
+  .hamburger span:nth-child(1),
+  .hamburger span:nth-child(2) {
+    width: 26px;
+  }
+
+  .hamburger span:nth-child(3) {
+    width: 18px;
+  }
 }
