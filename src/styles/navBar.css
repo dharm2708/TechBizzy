@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  color: white;
+  margin: 60px;
+  z-index: 10;
+}
+.logo {
+  font-size: 3rem;
+  font-weight: 550;
+  margin-left: 10px;
+}
+.hamburger {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 12px;
+  gap: 10px;
+  border-radius: 5px;
+  margin-left: 1500px;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.hamburger span:nth-child(1) {
+  width: 36px;
+}
+.hamburger span:nth-child(2) {
+  width: 36px;
+}
+.hamburger span:nth-child(3) {
+  width: 24px;
+}

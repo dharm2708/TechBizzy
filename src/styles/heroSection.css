@@ -1,0 +1,307 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  position: absolute;
+  top: 53%;
+  left: 250px;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+h1 {
+  font-size: 6rem;
+  color: #888;
+}
+h1 span {
+  color: rgb(240, 237, 237);
+}
+
+.subtext {
+  font-size: 18px;
+  color: #888;
+  margin-top: 50px;
+  line-height: 1.7;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+  width: 100%;
+  padding-right: 60px;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.btn-orange {
+  background: orange;
+  color: black;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 1px;
+}
+p {
+  margin-left: 30px;
+}
+.btn-dark {
+  background: black;
+  color: white;
+  border: none;
+  padding-left: 22px;
+  font-size: 15px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 1px;
+}
+
+.arrow-orange {
+  background-color: black;
+  color: orange;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+.arrow-dark {
+  background-color: rgb(53, 52, 52);
+  color: white;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 20px;
+}
+svg {
+  height: 24px;
+  width: 24px;
+}
+.vertical-text {
+  position: absolute;
+  left: 100px;
+  bottom: 2%;
+  transform: rotate(-90deg) translateX(50%);
+  transform-origin: left bottom;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+.scroll-container {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 800px;
+}
+
+.circle-text {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  text {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.text-circle {
+  width: 200px;
+  height: 200px;
+  transform: rotate(-25deg);
+  letter-spacing: 2px;
+}
+
+.center-circle {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  font-size: 16px;
+  color: orange;
+  transform: translateY(1px);
+  background-color: black;
+  padding: 15px;
+  align-items: center;
+  display: flex;
+  border-radius: 200px;
+}
+
+/* Hover Effects */
+.btn-orange:hover {
+  background: #ffb84d;
+  color: black;
+}
+
+.btn-dark:hover {
+  color: #ffcc70;
+}
+
+.arrow-orange:hover {
+  background-color: orange;
+  color: black;
+}
+
+.arrow-dark:hover {
+  background-color: white;
+  color: black;
+}
+
+.hamburger:hover {
+  background-color: #1a1a1a;
+}
+
+.center-circle:hover {
+  background-color: #ffb84d;
+}
+
+.text-circle:hover {
+  color: rgb(79, 78, 78);
+}
+
+.logo:hover {
+  color: #ffcc70;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .hamburger {
+    margin-left: auto;
+  }
+
+  .content {
+    left: 150px;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .scroll-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content {
+    left: 60px;
+    top: 50%;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .subtext {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vertical-text {
+    display: none;
+  }
+
+  .scroll-container {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .circle-text,
+  .text-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .center-circle {
+    width: 80px;
+    height: 80px;
+    top: 35px;
+    left: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtext {
+    font-size: 14px;
+  }
+
+  .arrow,
+  .arrow-dark,
+  .arrow-orange {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn-orange,
+  .btn-dark {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+
+  .center-circle {
+    width: 60px;
+    height: 60px;
+    top: 45px;
+    left: 45px;
+  }
+}
