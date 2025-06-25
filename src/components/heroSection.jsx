@@ -1,18 +1,35 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/heroSection.css";
 import { GoArrowDown, GoArrowRight } from "react-icons/go";
 import NavBar from "./navBar";
 
 const HeroSection = () => {
+  const [rotation, setRotation] = useState(0);
+  const lastScrollY = useRef(0);
+
   const handleClick = () => {
     window.scrollBy({
-      top: window.innerHeight,
+      top: document.documentElement.clientHeight,
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY.current;
+
+      setRotation((prevRotation) => prevRotation + (isScrollingDown ? -4 : 4));
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="hero">
-      {/* Content */}
       <div className="content">
         <h1>
           <span className="bold">Crafting</span> Your <br />
@@ -22,7 +39,8 @@ const HeroSection = () => {
           Pioneering IT solutions, unmatched excellence. Elevate your <br />
           digital presence with our cutting-edge technology and expertise.
         </p>
-        {/* button */}
+
+        {/* Button Row */}
         <div className="button-row">
           <div className="buttons">
             <button className="btn-orange">
@@ -38,10 +56,15 @@ const HeroSection = () => {
               </span>
             </button>
           </div>
-          {/* Scroll Down Button */}
-          <div className="scroll-container" onClick={{ handleClick }}>
+
+          {/* Scroll Button */}
+          <div className="scroll-container" onClick={handleClick}>
             <div className="circle-text">
-              <svg viewBox="0 0 100 100" className="text-circle">
+              <svg
+                viewBox="0 0 100 100"
+                className="text-circle"
+                style={{ transform: `rotate(${rotation}deg)` }}
+              >
                 <defs>
                   <path
                     id="circlePath"

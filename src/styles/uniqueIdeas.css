@@ -96,7 +96,7 @@
   margin-top: 65px;
   margin-left: 30px;
 }
-p {
+.hero-button p {
   margin-left: 30px;
 }
 .hero-button:hover {
@@ -138,9 +138,10 @@ svg {
 }
 .services-wrapper {
   display: flex;
-
   margin-top: 100px;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .service-card {
@@ -217,7 +218,6 @@ svg {
   background-color: #ff9900;
 }
 
-
 @media screen and (max-width: 1200px) {
   .hero-subtitle {
     margin-right: 200px;
@@ -263,7 +263,10 @@ svg {
     text-align: center;
     font-size: 13px;
   }
-
+  .hero-button {
+    flex-direction: row;
+    padding: 8px 30px;
+  }
   .hero-image {
     width: 150px;
     height: 70px;

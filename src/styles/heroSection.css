@@ -34,13 +34,14 @@ h1 span {
   align-items: center;
   justify-content: space-between;
   margin-top: 60px;
-  width: 100%;
-  padding-right: 60px;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .buttons {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .btn-orange {
@@ -111,12 +112,12 @@ svg {
 .scroll-container {
   width: 120px;
   height: 120px;
-  position: relative;
   background: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 800px;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .circle-text {
@@ -131,8 +132,9 @@ svg {
 .text-circle {
   width: 200px;
   height: 200px;
-  transform: rotate(-25deg);
   letter-spacing: 2px;
+  transform: rotate(0deg); /* This will be updated via JS */
+  transition: transform 0.3s ease;
 }
 
 .center-circle {
@@ -194,7 +196,6 @@ svg {
   color: #ffcc70;
 }
 
-
 @media screen and (max-width: 1200px) {
   .content {
     left: 100px;
@@ -243,36 +244,20 @@ svg {
 }
 
 @media screen and (max-width: 768px) {
-  .content {
-    position: static;
-    transform: none;
-    padding: 100px 20px 40px 20px;
-    text-align: center;
-    left: 0;
-  }
-
   .button-row {
+    flex-direction: column;
     align-items: center;
   }
 
   .buttons {
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
 
-  .btn-orange,
-  .btn-dark {
-    width: 200px;
-    justify-content: center;
-  }
-
-  .vertical-text {
-    display: none;
-  }
-
   .scroll-container {
-    margin: 40px auto 0 auto;
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
   }
 
   .circle-text {
@@ -291,20 +276,6 @@ svg {
     top: 30px;
     left: 30px;
   }
-
-  .arrow {
-    font-size: 12px;
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  .subtext {
-    font-size: 14px;
-    margin-top: 30px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -314,6 +285,21 @@ svg {
   }
 
   .scroll-container {
-    transform: scale(0.9);
+    width: 90px;
+    height: 90px;
+  }
+  .circle-text {
+    width: 100px;
+    height: 100px;
+  }
+  .text-circle {
+    width: 100px;
+    height: 100px;
+  }
+  .center-circle {
+    width: 50px;
+    height: 50px;
+    top: 25px;
+    left: 25px;
   }
 }
