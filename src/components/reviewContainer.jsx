@@ -20,6 +20,7 @@ const Review = ({ avatars, review }) => {
       }, 300);
     }
   };
+  //handle the slide next and previous of the reviews
   const handlePrev = () => {
     if (activeIndex > 0) {
       setDirection("left");

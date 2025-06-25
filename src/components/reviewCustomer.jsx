@@ -72,7 +72,7 @@ const ReviewCustomer = () => {
         <div className="cust-left">
           <div className="cust-titles">
             <h1>
-              <span className="gray">Customer</span> Voices
+              <span className="white">Customer</span> Voices
             </h1>
             <h1>
               <span className="white">Hear What </span> They Say

@@ -209,7 +209,7 @@ svg {
   left: 0;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.4s ease-in-out 0.2s;
+  transition: transform 0.3s ease-in-out 0.1s;
 }
 
 .service-card:hover .top-border {

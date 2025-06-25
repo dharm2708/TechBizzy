@@ -9,7 +9,7 @@ const HeroSection = () => {
 
   const handleClick = () => {
     window.scrollBy({
-      top: document.documentElement.clientHeight,
+      bottom: 0,
       behavior: "smooth",
     });
   };
@@ -58,12 +58,13 @@ const HeroSection = () => {
           </div>
 
           {/* Scroll Button */}
-          <div className="scroll-container" onClick={handleClick}>
+          <div className="scroll-container">
             <div className="circle-text">
               <svg
                 viewBox="0 0 100 100"
                 className="text-circle"
                 style={{ transform: `rotate(${rotation}deg)` }}
+                onClick={() => handleClick()}
               >
                 <defs>
                   <path
