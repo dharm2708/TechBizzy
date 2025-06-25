@@ -133,7 +133,7 @@ svg {
   width: 200px;
   height: 200px;
   letter-spacing: 2px;
-  transform: rotate(0deg); 
+  transform: rotate(0deg);
   transition: transform 0.3s ease;
 }
 

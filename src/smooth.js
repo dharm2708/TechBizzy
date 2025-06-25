@@ -9,7 +9,7 @@ export const smooth = () => {
     ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
-      smooth: 2,
+      smooth: 1,
       smoothTouch: 0,
     });
   }

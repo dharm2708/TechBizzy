@@ -1,28 +1,13 @@
-import React, { useEffect } from "react";
-import HeroSection from "../components/heroSection";
-import UniqueIdeas from "../components/uniqueIdeas";
-import NavBar from "../components/navBar";
-import Cursor from "../components/cursor";
-import ProgressBar from "../components/scrollBar";
-import ReviewCustomer from "../components/reviewCustomer";
-import { smooth } from "../smooth";
-import "../styles/home.css";
+import { lazy } from "react";
+const HeroSection = lazy(() => import("../components/heroSection"));
+const UniqueIdeas = lazy(() => import("../components/uniqueIdeas"));
+const ReviewCustomer = lazy(() => import("../components/reviewCustomer"));
 const Home = () => {
-  useEffect(() => {
-    smooth();
-  }, []);
   return (
     <>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <ProgressBar />
-          <Cursor />
-          <NavBar />
-          <HeroSection />
-          <UniqueIdeas />
-          <ReviewCustomer />
-        </div>
-      </div>
+      <HeroSection />
+      <UniqueIdeas />
+      <ReviewCustomer />
     </>
   );
 };
