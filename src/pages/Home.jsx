@@ -1,7 +1,6 @@
-import { lazy } from "react";
-const HeroSection = lazy(() => import("../components/heroSection"));
-const UniqueIdeas = lazy(() => import("../components/uniqueIdeas"));
-const ReviewCustomer = lazy(() => import("../components/reviewCustomer"));
+import HeroSection from "../components/heroSection";
+import UniqueIdeas from "../components/uniqueIdeas";
+import ReviewCustomer from "../components/reviewCustomer";
 const Home = () => {
   return (
     <>
