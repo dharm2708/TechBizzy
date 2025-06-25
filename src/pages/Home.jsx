@@ -4,6 +4,7 @@ import UniqueIdeas from "../components/uniqueIdeas";
 import NavBar from "../components/navBar";
 import Cursor from "../components/cursor";
 import ProgressBar from "../components/scrollBar";
+import ReviewCustomer from "../components/reviewCustomer";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <NavBar />
       <HeroSection />
       <UniqueIdeas />
+      <ReviewCustomer />
     </>
   );
 };

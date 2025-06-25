@@ -22,7 +22,12 @@ const Cursor = () => {
     };
   }, []);
 
-  return <div id="cursor" className="cursor-pointer" />;
+  return (
+    <div
+      id="cursor"
+      className="w-5 h-5 rounded-full bg-white pointer-events-none z-[9999] mix-blend-difference relative top-0 left-0"
+    ></div>
+  );
 };
 
 export default Cursor;

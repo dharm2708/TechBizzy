@@ -29,7 +29,6 @@ const services = [
 const UniqueIdeas = () => {
   return (
     <>
-      <hr />
       {/* Heading */}
       <section className="hero-section">
         <p className="hero-subtitle">
