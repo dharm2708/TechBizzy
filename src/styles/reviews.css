@@ -116,16 +116,27 @@
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
-
-.cust-subtitle {
-  color: #999;
-  font-size: 14px;
-  text-align: right;
-  margin-bottom: 40px;
-  margin-right: 700px;
-  max-width: 100%;
+.subtitle-line-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
 }
-
+.cust-subtitle {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-align: right;
+  margin-left: auto;
+}
+.horizontal-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #666;
+  max-width: 600px;
+}
 .cust-container {
   display: flex;
   align-items: flex-start;

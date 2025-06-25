@@ -31,11 +31,14 @@ const UniqueIdeas = () => {
     <>
       {/* Heading */}
       <section className="hero-section">
-        <p className="hero-subtitle">
-          Professionals focused on helping your brand
-          <br />
-          grow and move forward.
-        </p>
+        <div className="subtitle-line-wrapper">
+          <p className="hero-subtitle">
+            Professionals focused on helping your brand
+            <br />
+            grow and move forward.
+          </p>
+          <div className="horizontal-line"></div>
+        </div>
         {/* Title */}
         <div className="hero-container">
           <div className="hero-left">

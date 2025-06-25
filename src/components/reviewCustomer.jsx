@@ -59,11 +59,14 @@ const ReviewCustomer = () => {
     // section for customer review
     <section className="customer-section">
       {/* Subtitle */}
-      <p className="cust-subtitle">
-        Customer Review Are a valuable source
-        <br />
-        of information for both customer and businesses
-      </p>
+      <div className="subtitle-line-wrapper">
+        <p className="cust-subtitle">
+          Customer Review Are a valuable source
+          <br />
+          of information for both customer and businesses
+        </p>
+        <div className="horizontal-line"></div>
+      </div>
       {/* heading */}
       <div className="cust-container">
         <div className="cust-left">
